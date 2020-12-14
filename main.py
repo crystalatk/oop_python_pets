@@ -1,4 +1,5 @@
 from pet import Pet, CuddlyPet
+from toy import Toy
 
 pets = []
 
@@ -12,6 +13,7 @@ main_menu = [
     "Play with Pet",
     "Feed Pet",
     "View status of pets",
+    "Give a Toy to all of your pets",
     "Do nothing",
 ]
 
@@ -65,6 +67,9 @@ def main():
             for pet in pets:
                 print(pet)
         if choice == 5:
+            for pet in pets:
+                pet.get_toy(Toy()
+        if choice == 6:
             for pet in pets:
                 pet.be_alive()
 
