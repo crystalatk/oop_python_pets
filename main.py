@@ -68,7 +68,7 @@ def main():
                 print(pet)
         if choice == 5:
             for pet in pets:
-                pet.get_toy(Toy()
+                pet.get_toy(Toy())
         if choice == 6:
             for pet in pets:
                 pet.be_alive()
