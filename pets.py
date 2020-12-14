@@ -34,4 +34,5 @@ class CuddlyPet(Pet):
         self.happiness -= self.mopiness/2
 
     def cuddle(self, other_pet):
-        other_pet.get_love()
+        for i in range(self.cuddle_level):
+            other_pet.get_love()
