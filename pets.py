@@ -25,12 +25,9 @@ class Pet:
 
 
 class CuddlyPet(Pet):
-    def __init__(self, name, fullness=50, hunger=5):
-        self.name = name
-        self.fullness = fullness
-        self.happiness = 100
-        self.hunger = hunger
-        self.mopiness = 1
+    def __init__(self, name, fullness=50, hunger=5, cuddle_level=1):
+        super().__init__(name, fullness, 100, hunger, 1)
+        self.cuddle_level = cuddle_level
 
     def be_alive(self):
         self.fullness -= self.hunger
