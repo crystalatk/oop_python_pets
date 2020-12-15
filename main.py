@@ -1,5 +1,6 @@
 from pet import Pet, CuddlyPet
 from toy import Toy
+from treat import ColdPizza, Bacon, VeganSnack
 
 pets = []
 
@@ -14,7 +15,14 @@ main_menu = [
     "Feed Pet",
     "View status of pets",
     "Give a Toy to all of your pets",
+    "Give pet a treat",
     "Do nothing",
+]
+
+treat_menu = [
+    "Cold Pizza",
+    "Bacon",
+    "VeganSnack"
 ]
 
 
@@ -46,6 +54,8 @@ def get_user_choice(choice_list):
 
 
 def main():
+    # for each_treat in treats:
+    #     Treat(each_treat, each_treat[0], each_treat_[1])
     while True:
         choice = get_user_choice(main_menu)
         if choice == 1:
@@ -69,6 +79,18 @@ def main():
         if choice == 5:
             for pet in pets:
                 pet.get_toy(Toy())
+        if choice == 6:
+            print("Please choose what ype of treat:")
+            treat_choice = get_user_choice(treat_menu)
+            if treat_choice == 1:
+                for pet in pets:
+                    pet.get_treat(ColdPizza())
+            if treat_choice == 2:
+                for pet in pets:
+                    pet.get_treat(Bacon())
+            if treat_choice == 3:
+                for pet in pets:
+                    pet.get_treat(VeganSnack())
         if choice == 6:
             for pet in pets:
                 pet.be_alive()

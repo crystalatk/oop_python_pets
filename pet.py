@@ -22,6 +22,10 @@ class Pet:
     def get_toy(self, toy):
         self.toys.append(toy)
 
+    def get_treat(self, treat):
+        self.fullness += treat.full
+        self.happiness += treat.health
+
     def __str__(self):
         return '''
         %s:
@@ -42,3 +46,10 @@ class CuddlyPet(Pet):
     def cuddle(self, other_pet):
         for i in range(self.cuddle_level):
             other_pet.get_love()
+
+    def __str__(self):
+        return '''
+        Extra Cuddly %s:
+        Fullness: %d
+        Happiness: %d
+        ''' % (self.name, self.fullness, self.happiness)
