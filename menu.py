@@ -9,7 +9,7 @@ class Menu():
     def choices_to_string(self):
         choice_string = ""
         num = 1
-        for choice in choice_list:
+        for choice in self.choice_list:
             choice_string += "%d: %s\n" % (num, choice)
             num += 1
         choice_string += self.prompt_text
@@ -20,7 +20,7 @@ class Menu():
 
     def get_user_choice(self):
         choice = -1
-        choice_string = self.choices_to_string(self.choice_list)
+        choice_string = self.choices_to_string()
         while choice == -1:
             try:
                 choice = int(input(choice_string))
